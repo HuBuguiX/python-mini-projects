@@ -11,7 +11,7 @@ if __name__ == '__main__':
             # 把JSON反序列化为Python对象(dict). `json.loads()`把JSON的字符串反序列化
             data = json.loads(f.read())
 
-            # *args: 可变参数。args在函数内部为一个tuple
+            # *data[0] 解包
             output = ','.join([*data[0]])
             for obj in data:
                 output += f'\n{obj["Name"]},{obj["age"]},{obj["birthyear"]},'
